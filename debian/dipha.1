@@ -1,0 +1,45 @@
+.TH dipha "1" "January 2016" "DIPHA 2.1.0" "User Commands"
+.SH NAME
+dipha \- compute persistence homology
+.SH SYNOPSIS
+\fBdipha\fR [\fI\,options\/\fR] \fI\,input_filename output_filename\/\fR
+.SH DESCRIPTION
+This program computes persistence diagram from
+.IP \(bu 2
+a filtered cell complex represented by a boundary matrix
+.IP \(bu 2
+an image data
+.IP \(bu 2
+a distance matrix
+.PP
+You can only use Z_2 coefficients.
+.PP
+This program supports parallel computation using MPI. For example the following
+commands run the program in 8 parallel.
+
+.RS 4
+mpirun -n 8 input.complex output.diagram
+.RE
+.SH OPTIONS
+.TP
+\fB\-\-help\fR
+prints this screen
+.TP
+\fB\-\-dual\fR
+use dualization
+.TP
+\fB\-\-upper_dim N\fR
+maximal dimension to compute
+.TP
+\fB\-\-upper_value X\fR
+maximal value to compute
+.TP
+\fB\-\-benchmark\fR
+prints timing info
+.SH AUTHORS
+\fBdipha\fR is written IST Austria, contributed by: Jan Reininghaus.
+.PP
+This manual page was written by Ippei Obayashi <ohai@kmc.gr.jp>.
+.SH SEE ALSO
+https://github.com/DIPHA/dipha
+
