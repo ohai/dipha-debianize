@@ -13,7 +13,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, mpi-default-bin
 Description: Software to computer perssitence diagram
  This program computes persistence diagram from
- * a filtered cell complex represented by a boundary matrix
- * an image data
- * a distance matrix
+   * a filtered cell complex represented by a boundary matrix
+   * an image data
+   * a distance matrix
  You can only use Z_2 coefficents.
