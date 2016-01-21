@@ -1,0 +1,24 @@
+From: Ippei Obayashi <ohai@kmc.gr.jp>
+Date: Thu, 21 Jan 2016 20:23:55 +0900
+Subject: update-cmakefiles-to-install-binaries
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a861590..a233897 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -59,9 +59,11 @@ FILE(GLOB dipha_algorithms_includes "include/dipha/algorithms/*.h")
+ 
+ add_executable (dipha src/dipha.cpp ${all_dipha_includes})
+ target_link_libraries(dipha ${MPI_LIBRARIES})
++install(PROGRAMS ${CMAKE_BINARY_DIR}/dipha DESTINATION "bin")
+ 
+ add_executable (dualize src/dualize.cpp)
+ target_link_libraries(dualize ${MPI_LIBRARIES})
++install(PROGRAMS ${CMAKE_BINARY_DIR}/dualize DESTINATION bin RENAME dipha-dualize)
+ 
+ add_executable (create_phat_filtration src/create_phat_filtration.cpp)
+ target_link_libraries(create_phat_filtration ${MPI_LIBRARIES})
