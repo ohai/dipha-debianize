@@ -1,0 +1,5 @@
+dipha (2.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Ippei Obayashi <ohai@kmc.gr.jp>  Thu, 21 Jan 2016 19:50:13 +0900

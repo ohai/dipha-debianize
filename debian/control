@@ -1,0 +1,19 @@
+Source: dipha
+Section: math
+Priority: optional
+Maintainer: Ippei Obayashi <ohai@kmc.gr.jp>
+Build-Depends: debhelper (>=9), cmake, mpi-default-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/DIPHA/dipha
+#Vcs-Git: git://anonscm.debian.org/collab-maint/dipha.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/dipha.git
+
+Package: dipha
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, mpi-default-bin
+Description: Software to computer perssitence diagram
+ This program computes persistence diagram from
+ * a filtered cell complex represented by a boundary matrix
+ * an image data
+ * a distance matrix
+ You can only use Z_2 coefficents.
